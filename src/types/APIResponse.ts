@@ -6,7 +6,7 @@ export interface GetTokenResponse {
 }
 
 export interface RefreshTokenResponse {
-  token: string;
+  access_token: string;
 }
 
 export interface GetUserResponse {

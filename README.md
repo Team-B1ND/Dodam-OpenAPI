@@ -32,8 +32,10 @@ const token = await authClient.login(code);
 ```javascript
 const code: string = "code";
 
+
 const token = await authClient.getToken(code);
 ```
+
 ### Refresh token
 ```javascript
 const refreshToken: string = "refresh_token";
