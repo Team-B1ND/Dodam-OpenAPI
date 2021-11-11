@@ -10,27 +10,27 @@ export class DodamAPI {
 				code,
 				client_id,
 				client_secret
-			})).data.data;
+			})).data;
 		} catch (err) {
 			if (axios.isAxiosError(err)) {
 				GetTokenErrorHandler(err);
 			}
-	
+
 			throw err;
 		}
 	}
 
-	static async refreshToken(refresh_token: string, client_id: string): Promise<RefreshTokenResponse> {
+	static async refreshToken(refreshToken: string, clientId: string): Promise<RefreshTokenResponse> {
 		try {
 			return (await axios.post(`${EndPoints.DAUTH}/refresh`, {
-				refresh_token,
-				client_id
-			})).data.data;
+				refreshToken,
+				clientId
+			})).data;
 		} catch (err) {
 			if (axios.isAxiosError(err)) {
 				RefreshTokenErrorHandler(err);
 			}
-	
+
 			throw err;
 		}
 	}
@@ -46,7 +46,7 @@ export class DodamAPI {
 			if (axios.isAxiosError(err)) {
 				GetUserErrorHandler(err)
 			}
-	
+
 			throw err;
 		}
 	}
