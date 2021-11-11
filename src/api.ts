@@ -20,11 +20,11 @@ export class DodamAPI {
 		}
 	}
 
-	static async refreshToken(refresh_token: string, client_id: string): Promise<RefreshTokenResponse> {
+	static async refreshToken(refreshToken: string, clientId: string): Promise<RefreshTokenResponse> {
 		try {
 			return (await axios.post(`${EndPoints.DAUTH}/refresh`, {
-				refresh_token,
-				client_id
+				refreshToken,
+				clientId
 			})).data;
 		} catch (err) {
 			if (axios.isAxiosError(err)) {

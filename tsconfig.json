@@ -3,13 +3,13 @@
     "target": "es5",
     "module": "commonjs",
     "lib": [
-      "ES2015",
-      "ES2016"
+      "ES2015"
     ],
     "outDir": "./dist",
     "strict": true,
+    "declaration": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
 }
